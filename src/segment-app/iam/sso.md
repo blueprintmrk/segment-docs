@@ -121,4 +121,9 @@ If the workspace is configured to require SSO, and the user is not on your IdP, 
 
 ##### How do I configure SSO to access multiple workspaces?
 
-If you would like to use SSO for multiple workspaces, your admin must configure access to each workspace as a separate app in your identity provider.
+1. Your admin must configure access to each workspace as a separate app in your identity provider.
+2. Start the login process from your IdP provider (IdP-initiated SSO), instead of Segment login page
+3. The Segment login page can still be used, but it only redircts you to the default workspace (Segment-Initiated SSO)
+  - Only need to verify domain(s) in the default workspace
+  - Switch workspaces directly within Segment UI may encounter errors
+
